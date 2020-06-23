@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd config/dmenu
+# patch -p1 < patches/*
+sudo make clean install

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd config/st
+# patch -p1 < patches/*
+sudo make clean install

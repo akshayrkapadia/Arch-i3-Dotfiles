@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd ./config
+cp ~/.vimrc . 
+cp ~/.zshrc .
+cp ~/.Xresources .
+cp -R ~/.config/i3 .
+cp -R ~/.config/i3status .
+cp -R ~/.config/dunst .
+cp -R ~/.config/ncmpcpp .
+cp -R ~/.config/mpd .
+cp -R ~/dmenu .
+cp -R ~/st .
+sudo cp /usr/bin/i3exit .
+sudo cp /etc/ly/config.ini ./ly
+sudo cp /etc/X11/xorg.conf.d/30-touchpad.conf .
+
+cd ..
+cp -R ~/.local/bin .
+cp -R ~/Pictures/wallpapers .
