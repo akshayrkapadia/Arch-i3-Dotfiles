@@ -3,7 +3,7 @@
 
 case "$1" in
     lock)
-        i3lock-fancy 
+        i3lock -k -B=1 --pass-media-keys --pass-screen-keys --indicator --insidecolor=00000099 --timecolor=ffffffdd --datecolor=ffffffdd --datestr="%a, %b %d" 
         ;;
     logout)
         i3-msg exit

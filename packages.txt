@@ -8,6 +8,7 @@ git
 grub
 htop
 i3-gaps
+i3lock-color
 i3status
 iproute2
 lxappearance
