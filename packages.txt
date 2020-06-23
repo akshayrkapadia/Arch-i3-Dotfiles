@@ -38,6 +38,8 @@ vim-airline
 vim-airline-themes
 vim-ctrlp
 vim-fugitive
+vim-gitgutter
+vim-jedi
 vim-nerdcommentater
 vim-nerdtree
 vim-syntastic

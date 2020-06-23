@@ -24,6 +24,13 @@ cp -r ./ncmpcpp ~/.config
 cp .vimrc ~/
 sudo cp i3exit /usr/bin
 
+# Configure vim
+cd ~/.vim/bundle/
+git clone https://github.com/jiangmiao/auto-pairs.git
+git clone https://github.com/vim-scripts/AutoComplPop.git
+git clone https://github.com/joshdick/onedark.vim.git
+git clone https://github.com/vim-scripts/SearchComplete.git
+
 # Copy Ly config file
 sudo cp ./ly/config.ini /etc/ly/
 
