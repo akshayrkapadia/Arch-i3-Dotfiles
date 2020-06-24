@@ -37,8 +37,8 @@ sudo cp ./30-touchpad.conf /etc/X11/xorg.conf.d/
 cd ..
 
 # Copy custom scripts
-mkdir -p ~/.local/ && cp -R ./bin ~/.local/
-sudo chmod +x ~/.local/bin/*
+mkdir -p /home/akshay/.local/ && cp -R ./bin /home/akshay/.local/
+sudo chmod +x /home/akshay/.local/bin/*
 
 # Reduce grub timeout to 0
 sudo sed -i "s/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g" /etc/default/grub
@@ -63,7 +63,5 @@ git clone https://github.com/joshdick/onedark.vim.git
 git clone https://github.com/vim-scripts/SearchComplete.git
 
 # Clean up system
-./bin/pacm
+/home/akshay/.local/bin/pacm
 
-# Reboot the system
-sudo reboot
