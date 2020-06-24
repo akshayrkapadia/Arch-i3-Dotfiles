@@ -50,3 +50,4 @@ xf86-input-synaptics
 xorg-apps
 xorg-server
 xorg-xinit
+zsh
