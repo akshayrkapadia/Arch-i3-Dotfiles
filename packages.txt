@@ -12,7 +12,7 @@ i3lock-color
 i3status
 iproute2
 libnotify
-libx11-dev
+libx11
 lxappearance
 man-db
 mesa
@@ -42,7 +42,7 @@ vim-ctrlp
 vim-fugitive
 vim-gitgutter
 vim-jedi
-vim-nerdcommentater
+vim-nerdcommenter
 vim-nerdtree
 vim-syntastic
 xclip

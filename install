@@ -1,31 +1,34 @@
 #!/bin/bash
 
 # Install packages
-pacman -S - < ./packages.txt
+if [[ $(pacman -S - < ./packages.txt) ]]
+then
+        
+        # Configure locale
+        echo LANG=en_US.UTF-8 > /etc/locale.conf
+        export LANG=en_US.UTF-8
 
-# Configure locale
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LANG=en_US.UTF-8
+        # Configure grub
+        grub-install --recheck --target=i386-pc /dev/sda
+        grub-mkconfig -o /boot/grub/grub.cfg
 
-# Configure grub
-grub-install --recheck --target=i386-pc /dev/sda
-grub-mkconfig -o /boot/grub/grub.cfg
+        # Configure pacman
+        vim /etc/pacman.conf # uncomment multilib
+        pacman -Syy
 
-# Configure pacman
-vim /etc/pacman.conf # uncomment multilib
-pacman -Syy
+        # Configure users
+        EDITOR=vim visudo # uncomment %wheel ALL=(ALL) ALL
+        useradd -m -g users -G wheel,storage,power -s /bin/bash akshay
+        passwd akshay # enter user password
+        passwd # enter root password
 
-# Configure users
-EDITOR=vim visudo # uncomment %wheel ALL=(ALL) ALL
-useradd -m -g users -G wheel,storage,power -s /bin/bash akshay
-passwd akshay # enter user password
-passwd # enter root password
+        # Install Ly as the login manager
+        sudo chmod +x installScripts/installLy && ./installScripts/installLy
 
-# Install Ly as the login manager
-sudo chmod +x installScripts/installLy && ./installScripts/installLy
+        # Enable NetworkManager service
+        systemctl enable NetworkManager
 
-# Enable NetworkManager service
-systemctl enable NetworkManager
+        # Reboot the system
+        sudo reboot
 
-# Reboot the system
-sudo reboot
+fi
