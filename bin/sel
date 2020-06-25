@@ -5,7 +5,7 @@ if [[ "$HISTORY" == "" ]]
 then
 	notify-send "xclip" "Clipboard empty"
 else
-	SELECTION="$(cat ~/.clipboard_history.txt | grep -v '^$' | dmenu -p 'Selection' -i -F -fn 'monospace-13')"
+	SELECTION="$(cat ~/.clipboard_history.txt | grep -v '^$' | dmenu -p 'Selection' -i -F)"
 	if [[ "$SELECTION" != "" ]]
 	then
 		if [[ "$SELECTION" == "CLEAR" ]]

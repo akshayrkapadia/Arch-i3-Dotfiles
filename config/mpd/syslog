@@ -1,0 +1,4 @@
+Jun 24 01:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 24 01:46 : exception: Failed to open '/home/akshay/.config/mpd/state': No such file or directory
+Jun 24 01:46 : client: [0] opened from 127.0.0.1:50914
+Jun 24 01:46 : client: [0] closed

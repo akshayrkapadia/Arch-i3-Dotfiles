@@ -1,20 +1,20 @@
 #!/bin/bash
 
 cd ./config
-cp ~/.vimrc . 
-cp ~/.zshrc .
-cp ~/.Xresources .
-cp -R ~/.config/i3 .
-cp -R ~/.config/i3status .
-cp -R ~/.config/dunst .
-cp -R ~/.config/ncmpcpp .
-cp -R ~/.config/mpd .
-cp -R ~/dmenu .
-cp -R ~/st .
+cp /home/akshay/.vimrc . 
+cp /home/akshay/.zshrc .
+cp /home/akshay/.Xresources .
+cp -R /home/akshay/.config/i3 .
+cp -R /home/akshay/.config/i3status .
+cp -R /home/akshay/.config/dunst .
+cp -R /home/akshay/.config/ncmpcpp .
+cp -R /home/akshay/.config/mpd .
+cp -R /home/akshay/dmenu .
+cp -R /home/akshay/st .
 sudo cp /usr/bin/i3exit .
 sudo cp /etc/ly/config.ini ./ly
 sudo cp /etc/X11/xorg.conf.d/30-touchpad.conf .
 
 cd ..
-cp -R ~/.local/bin .
-cp -R ~/Pictures/wallpapers .
+cp -R /home/akshay/.local/bin .
+cp -R /home/akshay/Pictures/wallpapers .

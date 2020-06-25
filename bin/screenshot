@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPTION=$(echo -e "Entire Screen\nSelection" | dmenu -i -F -fn "monospace-13")
+OPTION=$(echo -e "Entire Screen\nSelection" | dmenu -i -F)
 
 if [[ "$OPTION" == "Entire Screen" ]]; then
 	scrot && notify-send "Screenshot saved to ~/"

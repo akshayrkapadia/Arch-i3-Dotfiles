@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE=$(find ~/ -type f | dmenu -p "File" -i -F -fn "monospace-13")
+FILE=$(find ~/ -type f | dmenu -p "File" -i -F)
 if [ "$FILE" != "" ]
 then
 	xdg-open $FILE
